@@ -14,6 +14,8 @@ function rot13(str) {
 
 rot13("SERR PBQR PNZC");  
 ```
+
+
 ### Roman Numeral Converter  
 >Convert the given number into a roman numeral.  
 All roman numerals answers should be provided in upper-case.
@@ -37,4 +39,62 @@ function palindrome(str) {
 }
 
 palindrome("eye");
+```
+### Telephone Number Validator
+
+>Return true if the passed string looks like a valid US phone number.  
+The user may fill out the form field any way they choose as long as it has the format of a valid US number. The following are examples of valid formats for US numbers (refer to the tests below for other variants):
+
+```
+function telephoneCheck(str) {
+  return true;
+}
+
+telephoneCheck("555-555-5555");
+```
+> Phone number examples to be validate:
+555-555-5555  
+(555)555-5555  
+(555) 555-5555  
+555 555 5555  
+5555555555  
+1 555 555 5555  
+
+### Cash Register
+
+>Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.  
+cid is a 2D array listing available currency.  
+The checkCashRegister() function should always return an object with a status key and a change key.  
+Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if you cannot return the exact change.  
+Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value for the key change if it is equal to the change due.  
+Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in highest to lowest order, as the value of the change key.  
+
+| Currency Unit       |	Amount             | 
+|---------------------|--------------------|
+| Penny               |	$0.01 (PENNY)      |
+| Nickel              |	$0.05 (NICKEL)     |
+| Dime                |	$0.1 (DIME)        |
+| Quarter             |	$0.25 (QUARTER)    |
+| Dollar              |	$1 (ONE)           |
+| Five Dollars        |	$5 (FIVE)          |
+| Ten Dollars         |	$10 (TEN)          |
+| Twenty Dollars      |	$20 (TWENTY)       |
+| One-hundred Dollars |	$100 (ONE HUNDRED) |
+```
+function checkCashRegister(price, cash, cid) {
+  let change;
+  return change;
+}
+
+checkCashRegister(19.5, 20, [
+  ["PENNY", 1.01], 
+  ["NICKEL", 2.05], 
+  ["DIME", 3.1], 
+  ["QUARTER", 4.25],
+  ["ONE", 90], 
+  ["FIVE", 55], 
+  ["TEN", 20], 
+  ["TWENTY", 60], 
+  ["ONE HUNDRED", 100]
+]);
 ```
